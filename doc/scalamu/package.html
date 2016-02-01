@@ -51,7 +51,7 @@
 endofunctor of the category Scala types (type constructor of arity 1
 with a <code>map</code> function that obeys certain laws).</p><p><code>CofreeInstances</code> declares <code>Cofree</code> and thereby <code>µ</code> as an instance of
 scalaz typeclasses <code>Equal</code> (using structural equality)
-and <code>Show</code> (using case-class-lie conversion to a string).
+and <code>Show</code> (using case-class-like conversion to a string).
 This enables <code>===</code>, <code>assert_===</code>, and <code>.show</code> on <code>µ</code> instances.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -128,26 +128,6 @@ This enables <code>===</code>, <code>assert_===</code>, and <code>.show</code> o
       </a>
     </span>
       <p class="shortcomment cmt">A (nongeneric) F-coalgebra with carrier object <code>B</code>.</p>
-    </li><li name="scalamu.CofreeCataOps" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="CofreeCataOps[F[+_],A]extendsOps[scalaz.Cofree[F,A]]"></a>
-      <a id="CofreeCataOps[F[+_],A]:CofreeCataOps[F,A]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CofreeCataOps.html"><span class="name">CofreeCataOps</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">+_</span>]</span></span>, <span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scalaz.syntax.Ops">Ops</span>[<span class="extype" name="scalaz.Cofree">Cofree</span>[<span class="extype" name="scalamu.CofreeCataOps.F">F</span>, <span class="extype" name="scalamu.CofreeCataOps.A">A</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#scalamu.package@CofreeCataOps[F[+_],A]extendsOps[scalaz.Cofree[F,A]]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into <code>Cofree</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into <code>Cofree</code>.
-</p></div><dl class="paramcmts block"><dt class="tparam">F</dt><dd class="cmt"><p>branching endofunctor of this structure</p></dd><dt class="tparam">A</dt><dd class="cmt"><p>generic item type of this structure</p></dd></dl></div>
     </li><li name="scalamu.GenericAlgebra" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GenericAlgebra[A,F[_],B]=A=&gt;(F[B]=&gt;B)"></a>
       <a id="GenericAlgebra[A,F[_],B]:GenericAlgebra[A,F,B]"></a>
@@ -182,28 +162,6 @@ patterns for injection into <code>Cofree</code>.
       </a>
     </span>
       <p class="shortcomment cmt">Alias for <code>µ</code>.</p>
-    </li><li name="scalamu.MuOps" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="MuOps[F[+_]]extendsOps[scalamu.µ[F]]"></a>
-      <a id="MuOps[F[+_]]:MuOps[F]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="MuOps.html"><span class="name">MuOps</span></a><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">+_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scalaz.syntax.Ops">Ops</span>[<a href="#µ[F[_]]=scalaz.Cofree[F,Unit]" class="extmbr" name="scalamu.µ">µ</a>[<span class="extype" name="scalamu.MuOps.F">F</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#scalamu.package@MuOps[F[+_]]extendsOps[scalamu.µ[F]]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into initial F-algebras based on <code>µ</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into initial F-algebras based on <code>µ</code>.
-</p></div><dl class="paramcmts block"><dt class="tparam">F</dt><dd class="cmt"><p>endofunctor of the category Scala types for this structure
-          (type constructor of arity 1 with a <code>map</code> function that obeys
-          certain laws).</p></dd></dl></div>
     </li><li name="scalamu.ToCofreeCataOps" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ToCofreeCataOpsextendsAnyRef"></a>
       <a id="ToCofreeCataOps:ToCofreeCataOps"></a>
@@ -255,26 +213,6 @@ patterns for injection into initial F-algebras based on <code>µ</code>.
       </a>
     </span>
       
-    </li><li name="scalamu.TreeCataOps" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="TreeCataOps[A]extendsOps[scalaz.Tree[A]]"></a>
-      <a id="TreeCataOps[A]:TreeCataOps[A]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TreeCataOps.html"><span class="name">TreeCataOps</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scalaz.syntax.Ops">Ops</span>[<span class="extype" name="scalaz.Tree">Tree</span>[<span class="extype" name="scalamu.TreeCataOps.A">A</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#scalamu.package@TreeCataOps[A]extendsOps[scalaz.Tree[A]]" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into <code>Tree</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps a value <code>self</code> and provides catamorphism and related recursion
-patterns for injection into <code>Tree</code>.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>generic item type of this tree</p></dd></dl></div>
     </li><li name="scalamu.µ" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="µ[F[_]]=scalaz.Cofree[F,Unit]"></a>
       <a id="µ[F[_]]:µ[F]"></a>
@@ -327,35 +265,35 @@ function that obeys certain laws).
 This also serves as a companion to the fixpoint type constructor µ.
 </p></div></div>
     </li><li name="scalamu.ToCofreeCataOps#ToCofreeCataOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ToCofreeCataOps[F[+_],A](c:scalaz.Cofree[F,A])(implicitevidence$1:scalaz.Functor[F]):scalamu.CofreeCataOps[F,A]"></a>
-      <a id="ToCofreeCataOps[F[+_],A](Cofree[F,A])(Functor[F]):CofreeCataOps[F,A]"></a>
+      <a id="ToCofreeCataOps[F[_],A](c:scalaz.Cofree[F,A])(implicitevidence$2:scalaz.Functor[F]):scalamu.CofreeCataOps[F,A]"></a>
+      <a id="ToCofreeCataOps[F[_],A](Cofree[F,A])(Functor[F]):CofreeCataOps[F,A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ToCofreeCataOps</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">+_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="c">c: <span class="extype" name="scalaz.Cofree">Cofree</span>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>, <span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scalaz.Functor">Functor</span>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>]</span>)</span><span class="result">: <a href="CofreeCataOps.html" class="extype" name="scalamu.CofreeCataOps">CofreeCataOps</a>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>, <span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.A">A</span>]</span>
+        <span class="name">ToCofreeCataOps</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span name="c">c: <span class="extype" name="scalaz.Cofree">Cofree</span>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>, <span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scalaz.Functor">Functor</span>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="scalamu.CofreeCataOps">CofreeCataOps</span>[<span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.F">F</span>, <span class="extype" name="scalamu.ToCofreeCataOps.ToCofreeCataOps.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#scalamu.package@ToCofreeCataOps[F[+_],A](c:scalaz.Cofree[F,A])(implicitevidence$1:scalaz.Functor[F]):scalamu.CofreeCataOps[F,A]" title="Permalink" target="_top">
+      <a href="../index.html#scalamu.package@ToCofreeCataOps[F[_],A](c:scalaz.Cofree[F,A])(implicitevidence$2:scalaz.Functor[F]):scalamu.CofreeCataOps[F,A]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ToCofreeCataOps.html" class="extype" name="scalamu.ToCofreeCataOps">ToCofreeCataOps</a></dd></dl></div>
     </li><li name="scalamu.ToMuOps#ToMuOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ToMuOps[F[+_]](c:scalamu.µ[F])(implicitevidence$1:scalaz.Functor[F]):scalamu.MuOps[F]"></a>
-      <a id="ToMuOps[F[+_]](µ[F])(Functor[F]):MuOps[F]"></a>
+      <a id="ToMuOps[F[_]](c:scalamu.µ[F])(implicitevidence$2:scalaz.Functor[F]):scalamu.MuOps[F]"></a>
+      <a id="ToMuOps[F[_]](µ[F])(Functor[F]):MuOps[F]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ToMuOps</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">+_</span>]</span></span>]</span><span class="params">(<span name="c">c: <a href="#µ[F[_]]=scalaz.Cofree[F,Unit]" class="extmbr" name="scalamu.µ">µ</a>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scalaz.Functor">Functor</span>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>)</span><span class="result">: <a href="MuOps.html" class="extype" name="scalamu.MuOps">MuOps</a>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>
+        <span class="name">ToMuOps</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="c">c: <a href="#µ[F[_]]=scalaz.Cofree[F,Unit]" class="extmbr" name="scalamu.µ">µ</a>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scalaz.Functor">Functor</span>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="scalamu.MuOps">MuOps</span>[<span class="extype" name="scalamu.ToMuOps.ToMuOps.F">F</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#scalamu.package@ToMuOps[F[+_]](c:scalamu.µ[F])(implicitevidence$1:scalaz.Functor[F]):scalamu.MuOps[F]" title="Permalink" target="_top">
+      <a href="../index.html#scalamu.package@ToMuOps[F[_]](c:scalamu.µ[F])(implicitevidence$2:scalaz.Functor[F]):scalamu.MuOps[F]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -369,7 +307,7 @@ This also serves as a companion to the fixpoint type constructor µ.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ToTreeCataOps</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="scalaz.Tree">Tree</span>[<span class="extype" name="scalamu.ToTreeCataOps.ToTreeCataOps.A">A</span>]</span>)</span><span class="result">: <a href="TreeCataOps.html" class="extype" name="scalamu.TreeCataOps">TreeCataOps</a>[<span class="extype" name="scalamu.ToTreeCataOps.ToTreeCataOps.A">A</span>]</span>
+        <span class="name">ToTreeCataOps</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="scalaz.Tree">Tree</span>[<span class="extype" name="scalamu.ToTreeCataOps.ToTreeCataOps.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scalamu.TreeCataOps">TreeCataOps</span>[<span class="extype" name="scalamu.ToTreeCataOps.ToTreeCataOps.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../index.html#scalamu.package@ToTreeCataOps[A](t:scalaz.Tree[A]):scalamu.TreeCataOps[A]" title="Permalink" target="_top">
@@ -428,6 +366,28 @@ This also serves as a companion to the fixpoint type constructor µ.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CofreeInstances</dd></dl></div>
+    </li><li name="scalamu#functorToStringShow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="functorToStringShow[F[_],A](implicitA:scalaz.Show[A],implicitF:scalaz.Functor[F]):scalaz.Show[F[A]]"></a>
+      <a id="functorToStringShow[F[_],A](Show[A],Functor[F]):Show[F[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">functorToStringShow</span><span class="tparams">[<span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="A">A</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="A">A: <span class="extype" name="scalaz.Show">Show</span>[<span class="extype" name="scalamu.functorToStringShow.A">A</span>]</span>, <span name="F">F: <span class="extype" name="scalaz.Functor">Functor</span>[<span class="extype" name="scalamu.functorToStringShow.F">F</span>]</span>)</span><span class="result">: <span class="extype" name="scalaz.Show">Show</span>[<span class="extype" name="scalamu.functorToStringShow.F">F</span>[<span class="extype" name="scalamu.functorToStringShow.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#scalamu.package@functorToStringShow[F[_],A](implicitA:scalaz.Show[A],implicitF:scalaz.Functor[F]):scalaz.Show[F[A]]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Declaration of any <code>Functor</code> as an instance of <code>Show</code> using <code>toString</code>
+on the case classes underlying the functor.</p><div class="fullcomment"><div class="comment cmt"><p>Declaration of any <code>Functor</code> as an instance of <code>Show</code> using <code>toString</code>
+on the case classes underlying the functor. Requires the item type
+of the functor to be an instance of <code>Show</code>. Maps the corresponding
+<code>show</code> method over the functor and then applies <code>toString</code>.
+</p></div></div>
     </li><li name="scalamu#µ" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="µ:scalamu.In.type"></a>
       <a id="µ:In.type"></a>
